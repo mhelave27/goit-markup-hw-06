@@ -43,8 +43,17 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p, 
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+p { 
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
 
 
 ul {
@@ -742,15 +751,6 @@ button {
     border-radius: 4px;
 }
 
-.modal-content h4 {
-    color: var(--navy-blue);
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    text-align: center;
-}
 
 .modal-close {
     display: flex;
@@ -781,34 +781,64 @@ button {
     fill: var(--white);
 }
 
+.modal-content h4 {
+    color: var(--navy-blue);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
 .modal-content {
     padding: 72px 24px;
 }
-.user-contact {
+.modal-form {
     margin-top: 16px;
 }
-.user-contact label {
+.modal-label {
     display: block;
-    margin-top: 8px;
+    margin-top: 26px;
+    position: relative;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: var(--light-slate);
 }
 
-.user-contact input, .user-contact textarea {
+.modal-label:first-child {
+    margin-top: 34px;
+} 
+
+.modal-input, .modal-form textarea {
     display: block;
     width: 100%;
     margin-top: 8px;
     padding: 8px 16px;
 }
-.user-contact textarea {
+
+.modal-input {
+    padding-left: 38px;
+}
+.modal-form textarea {
     resize: none;
     width: 100%;
     height: 120px;
 }
 
-label.user-contact-checkbox {
+.modal-label-checkbox {
+    margin-top: 16px;
     display: flex;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: var(--light-slate);
 }
     
-.user-contact-checkbox input {
+.modal-input-checkbox {
     display: flex;
     width: 16px; 
     height: 16px; 
@@ -817,21 +847,26 @@ label.user-contact-checkbox {
     border: 1px;
 }
 
-.user-contact-checkbox a {
+.modal-label-checkbox a {
     text-decoration: underline;
     color: var(--iris);
     transition: color var(--transition-duration) var(--animation-timing-function);
 }
 
-.user-contact-checkbox a:hover {
+.modal-label-checkbox a:hover {
     color: var(--ocean);
 }
-.user-contact label {
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.04em;
-    text-align: left;
-    color: var(--light-slate);
+
+.modal-span {
+    position: absolute;
+    bottom: calc(100% + 4px);
+}
+
+.modal-label svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .submit-button {
@@ -840,7 +875,7 @@ label.user-contact-checkbox {
     outline: none;
     border: unset;
     padding: 16px 32px;
-    display: flex;
+    display: table;
     margin: auto;
     min-width: 169px;
     align-items: center;
