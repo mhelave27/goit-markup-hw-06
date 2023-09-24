@@ -749,6 +749,7 @@ button {
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.14),
                 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+    transition: transform var(--transition-duration) var(--animation-timing-function);
 }
 
 
@@ -765,7 +766,7 @@ button {
     top: 24px;
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.10);
-    transition: color var(--transition-duration) var(--animation-timing-function);
+    transition: background-color var(--transition-duration) var(--animation-timing-function), color var(--transition-duration) var(--animation-timing-function), background-color;
 }
 
 .modal-close:hover {
@@ -779,6 +780,7 @@ button {
 
 .modal-close:hover svg {
     fill: var(--white);
+    transition: fill var(--transition-duration) var(--animation-timing-function);
 }
 
 .modal-content h4 {
@@ -817,6 +819,18 @@ button {
     width: 100%;
     margin-top: 8px;
     padding: 8px 16px;
+    border: 1px solid var(--navyblue-modal);
+    border-radius: 4px;
+}
+
+.modal-input:focus,
+.modal-form textarea:focus {
+    border-color: var(--iris);
+    outline: 0;
+}
+
+.modal-input:focus + svg {
+    fill: var(--iris);
 }
 
 .modal-input {
@@ -839,12 +853,29 @@ button {
 }
     
 .modal-input-checkbox {
+    appearance: none;
     display: flex;
-    width: 16px; 
-    height: 16px; 
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+
+}
+
+.modal-icon-checkmark {
+    height: 15px;
+    width: 16px;
+    border: 1px solid var(--navyblue-modal);
+    border-radius: 2px;
     margin-right: 8px;
-    border-radius: 2px; 
-    border: 1px;
+    margin-bottom: 1px;
+    padding: 2px;
+    transition: fill var(--transition-duration) var(--animation-timing-function);
+}
+.modal-input-checkbox:checked + svg {
+    border: 0;
+    background-color: var(--ocean);
+
 }
 
 .modal-label-checkbox a {
