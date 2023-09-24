@@ -275,6 +275,7 @@ address {
 .team {
     background-color: var(--cloud);
     padding: 120px 0px;
+    width: 100%;
 }
 
 .team-list-item:hover {
@@ -744,7 +745,7 @@ button {
 .modal-content {
     position: relative;
     width: 408px;
-    height: 584px;
+    /* height: 584px; */
     background-color: var(--white);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.14),
                 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
@@ -752,6 +753,9 @@ button {
     transition: transform var(--transition-duration) var(--animation-timing-function);
 }
 
+.modal-content {
+    padding: 72px 24px 24px;
+}
 
 .modal-close {
     display: flex;
@@ -793,9 +797,7 @@ button {
     text-align: center;
 }
 
-.modal-content {
-    padding: 72px 24px;
-}
+
 .modal-form {
     margin-top: 16px;
 }
@@ -849,6 +851,7 @@ button {
     line-height: 14px;
     letter-spacing: 0.04em;
     text-align: left;
+    gap: 4px;
     color: var(--light-slate);
 }
     
