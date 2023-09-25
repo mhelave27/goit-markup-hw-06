@@ -826,13 +826,13 @@ button {
     border-radius: 4px;
 }
 
-.modal-input:focus,
-.modal-form textarea:focus {
+.modal-input:focus, .modal-form textarea:focus
+.modal-input:hover, .modal-form textarea:hover {
     border-color: var(--iris);
     outline: 0;
 }
 
-.modal-input:focus + svg {
+.modal-input:focus + svg, .modal-input:hover + svg {
     fill: var(--iris);
 }
 
